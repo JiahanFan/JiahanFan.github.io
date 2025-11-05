@@ -8,54 +8,22 @@ redirect_from:
   - /about.html
 sections:
   - id: about
-    title: "关于我"
+    title: "About Me"
     type: about
-  - id: news
-    title: "最新动态"
-    type: news
-  - id: publications
-    title: "论文与著作"
-    type: publications
-  - id: projects
-    title: "项目经历"
-    type: list
-  - id: experience
-    title: "工作与实习"
-    type: timeline
-  - id: education
-    title: "教育经历"
-    type: timeline
   - id: awards
-    title: "荣誉奖项"
+    title: "Honors and Awards"
     type: list
-  - id: talks
-    title: "讲座报告"
-    type: list
-  - id: service
-    title: "学术服务"
-    type: list
-  - id: teaching
-    title: "教学经历"
-    type: list
-  - id: skills
-    title: "技能特长"
-    type: skills
 about:
-  summary: "" # 简要介绍自己，支持 Markdown
-  highlights: [] # 关键点列表，例如 ["研究方向：XXX", "当前职位：YYY"]
-  links: [] # 重要链接列表，每项包含 label、url、description
-news: [] # 每项包含 date 与 text，可选 link、icon 字段
-publications:
-  featured: [] # 每项包含 title、authors、venue、year、links（列表）与 description
-  others: [] # 简单字符串或对象（同上字段），展示于“更多成果”部分
-projects: [] # 每项包含 name、role、period、description、link
-experience: [] # 每项包含 role、org、period、location、description、link
-education: [] # 每项包含 degree、school、period、location、description
-awards: [] # 每项包含 date、title、description
-talks: [] # 每项包含 date、title、event、link
-service: [] # 每项包含 role、org、period、description、link
-teaching: [] # 每项包含 course、role、period、description、link
-skills: [] # 每项包含 name、level、description
+  summary: "Hi! I am Jiahan Fan (范嘉涵), an undergraduate student from the Harbin Institute of Technology, Shenzhen, Guangdong, China."
+  highlights: []
+  links: []
+awards:
+  - title: "National Scholarship 2023-2024"
+    date: "2023-2024"
+    description: ""
+  - title: "First-Class People's Scholarship, Harbin Institute of Technology (Three times)"
+    date: ""
+    description: ""
 ---
 
 {% comment %}

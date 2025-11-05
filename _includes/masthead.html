@@ -5,7 +5,7 @@
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
           {% assign baseurl = site.baseurl | default: '' %}
-          {% assign home_label = page.home_label | default: '主页' %}
+          {% assign home_label = page.home_label | default: 'Home' %}
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="{{ baseurl }}/">{{ home_label }}</a></li>
 
           {% assign configured_sections = page.sections | default: nil %}
