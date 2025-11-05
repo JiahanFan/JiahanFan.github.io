@@ -24,6 +24,15 @@ awards:
   - title: "First-Class People's Scholarship, Harbin Institute of Technology (Three times)"
     date: ""
     description: ""
+  - title: "The 2024 ICPC Asia Chengdu Regional Contest - Gold Medal"
+    date: "26-27 October 2024"
+    description: ""
+  - title: "The 2024 ICPC Asia Nanjing Regional Contest - Silver Medal"
+    date: "02-03 November 2024"
+    description: ""
+  - title: "2024 China Collegiate Programming Contest, Zhengzhou Site - Gold Medal"
+    date: "2024"
+    description: ""
 ---
 
 {% comment %}
