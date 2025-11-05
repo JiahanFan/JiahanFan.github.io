@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Jiahan Fan (范嘉涵)" # Name displayed in the sidebar
   avatar           : "images/star.jpg" # Profile image
-  bio              : "Undergraduate student at Harbin Institute of Technology" # Short title/tagline
+  bio              : "An undergraduate student at Harbin Institute of Technology" # Short title/tagline
   location         : "Shenzhen, Guangdong, China" # City/region
   employer         : "" # Company or school (optional)
   pubmed           : "" # PubMed profile link (optional)
