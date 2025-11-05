@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Jiahan Fan - Homepage" # Title displayed in the masthead and browser tab
+title                    : "Jiahan Fan" # Title displayed in the masthead and browser tab
 description              : "" # Optional short description shown in the sidebar
 repository               : "JiahanFan/JiahanFan.github.io" # GitHub repository used for assets such as scholar stats
 google_scholar_stats_use_cdn : true
