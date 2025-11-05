@@ -4,10 +4,62 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
-          {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
+          {% assign baseurl = site.baseurl | default: '' %}
+          {% assign home_label = page.home_label | default: '主页' %}
+          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="{{ baseurl }}/">{{ home_label }}</a></li>
+
+          {% assign configured_sections = page.sections | default: nil %}
+          {% if configured_sections %}
+            {% for section in configured_sections %}
+              {% assign section_id = section.id %}
+              {% assign section_title = section.title | default: section_id %}
+              {% assign section_type = section.type | default: 'list' %}
+              {% assign should_render = false %}
+
+              {% case section_type %}
+              {% when 'about' %}
+                {% assign about_data = page.about %}
+                {% if about_data %}
+                  {% if about_data.summary != blank or (about_data.highlights and about_data.highlights != empty) or (about_data.links and about_data.links != empty) %}
+                    {% assign should_render = true %}
+                  {% endif %}
+                {% endif %}
+              {% when 'news' %}
+                {% if page.news and page.news != empty %}
+                  {% assign should_render = true %}
+                {% endif %}
+              {% when 'publications' %}
+                {% assign featured = page.publications.featured | default: [] %}
+                {% assign others = page.publications.others | default: [] %}
+                {% if featured != empty or others != empty %}
+                  {% assign should_render = true %}
+                {% endif %}
+              {% when 'skills' %}
+                {% assign data_items = page.skills | default: [] %}
+                {% if data_items != empty %}
+                  {% assign should_render = true %}
+                {% endif %}
+              {% when 'timeline' %}
+                {% assign data_items = page[section_id] | default: [] %}
+                {% if data_items != empty %}
+                  {% assign should_render = true %}
+                {% endif %}
+              {% else %}
+                {% assign data_items = page[section_id] | default: [] %}
+                {% if data_items != empty %}
+                  {% assign should_render = true %}
+                {% endif %}
+              {% endcase %}
+
+              {% if should_render %}
+                <li class="masthead__menu-item"><a href="#{{ section_id }}">{{ section_title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% for link in site.data.navigation.main %}
+              <li class="masthead__menu-item"><a href="{{ baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          {% endif %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
